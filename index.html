@@ -1,15 +1,71 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-<section class="header"></section>
-<section class="main"></section>
-<section class="footer"></section>
-</body>
+    <link rel="stylesheet" href="./css/index.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <section class="section header">
+                <div class="header__top">
+                    <div class="hamburger">
+                        <div class="hamburger__line"></div>
+                    </div>
+                    <div class="top-menu">
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="./image/user.svg" alt="user">
+                            </div>
+                            <div class="item__select">
+                                <select name="profile" id="profile" class="font-text">
+                                    <option value="profile">Личный кабинет</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="./image/Р.png" alt="ruble">
+                            </div>
+                            <div class="item__select">
+                                <select name="currency" id="currency" class="font-text">
+                                    <option value="ruble">Рубль</option>
+                                    <option value="hryvna">Гривна</option>
+                                    <option value="dollar">USD</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__select">
+                                <select name="language" id="language" class="font-text">
+                                    <option value="ru">Ru</option>
+                                    <option value="uk">Uk</option>
+                                    <option value="En">En</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item_row">
+                            <div class="item__phone font-phone">8 800 500-61-05</div>
+                            <div class="item__text font-small">Круглосуточная поддержка</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__icon">
+                    <img src="./image/logo.svg" alt="logo">
+                </div>
+                <div class="header__name font-h2">Морские прогулки</div>
+                <div class="header__description font-h1">по чёрному морю</div>
+                <div class="header__btn">
+                    <div class="button font-btn">Выбрать круиз
+                        <div class="button-darken"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="section main"></section>
+            <section class="section footer"></section>
+        </div>
+    </body>
 </html>

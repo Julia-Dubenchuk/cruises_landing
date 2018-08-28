@@ -1,0 +1,166 @@
+@import "../colors", "../button";
+//========================Template Selector===================================
+%for-hamburger{
+  width: 100%;
+  height: 2px;
+  background: #0d3351;
+  position: absolute;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', 'Roboto', sans-serif;
+  color: #0d3351;
+}
+
+.font-h2{
+  font-family: 'RobotoSlab', serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 38px;
+}
+
+.font-h1{
+  font-family: 'RobotoSlab', serif;
+  font-size: 100px;
+  font-weight: 400;
+  line-height: 100px;
+  text-transform: uppercase;
+}
+
+.font-btn{
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.button{
+  padding: 12px 16px;
+  background-color: rgb(51, 199, 253);
+  cursor: pointer;
+  position: relative;
+  &:hover .button-darken{
+    display: block;
+  }
+}
+
+.button-darken{
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .13);
+}
+
+select{
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+.container{
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  grid-template-areas:
+          "header"
+          "main"
+          "footer";
+  .section{
+    display: grid;
+    grid-template-rows: 85px minmax(auto, 104px) minmax(auto, 69px) minmax(auto, 146px) auto;
+    padding: 0 266px;
+  }
+  .header{
+    grid-area: header;
+    width: 100%;
+    height: 647px;
+    background: url("../image/sochi-2258855.svg") left bottom no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+
+    &__top{
+      display: grid;
+      grid-template-columns: 50% 50%;
+      padding-top: 34px;
+      .top-menu{
+        display: flex;
+        justify-content: flex-end;
+        .item{
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          justify-content: end;
+          padding-left: 39px;
+          &__icon{
+            padding-right: 8px;
+          }
+          &__text{
+            padding-top: 6px;
+          }
+          .font-text{
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+        .item_row{
+          display: grid;
+          justify-content: end;
+          grid-template-rows: 14px auto;
+          padding-left: 39px;
+          .font-phone{
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 14px;
+          }
+          .font-small{
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+      }
+    }
+
+    .hamburger{
+      width: 22px;
+      height: 16px;
+      position: relative;
+      &__line{
+        @extend %for-hamburger;
+        top: 50%;
+        &::before,
+        &::after{
+          @extend %for-hamburger;
+          content: '';
+        }
+        &::before{
+          top: 5px;
+        }
+        &::after{
+          bottom: 5px;
+        }
+      }
+    }
+
+    &__icon,
+    &__name,
+    &__description,
+    &__btn{
+      justify-self: center;
+    }
+  }
+
+  .main{
+    grid-area: main;
+  }
+  .footer{
+    grid-area: footer;
+  }
+}
+
