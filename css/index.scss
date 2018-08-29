@@ -1,0 +1,231 @@
+@import "__colors", "__button", "__typography", "__select", "__utillity.scss";
+//========================Template Selector===================================
+%for-hamburger{
+  width: 100%;
+  height: 2px;
+  background: $primary;
+  position: absolute;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', 'Roboto', sans-serif;
+  color: $primary;
+}
+
+.item_row{
+  @include grid($rows: 14px auto, $justify: end);
+  padding-left: 39px;
+
+}
+
+.container{
+  @include grid($columns: 100%, $rows: auto);
+  grid-template-areas:
+          "header"
+          "main"
+          "footer";
+  .section{
+    display: grid;
+  }
+  .header{
+    grid-area: header;
+    width: 100%;
+    height: 647px;
+    background: url("../image/sochi-2258855.svg") left bottom no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+    position: relative;
+    grid-template-rows: 85px minmax(auto, 104px) minmax(auto, 69px) minmax(auto, 146px) auto;
+    padding: 0 266px;
+
+    &__top{
+      @include grid($columns: 50% 50%);
+      padding-top: 34px;
+      .top-menu{
+        display: flex;
+        justify-content: flex-end;
+        .item{
+          @include grid($columns: repeat(2, auto), $justify: end);
+          padding-left: 39px;
+          &__icon{
+            padding-right: 8px;
+          }
+          &__text{
+            padding-top: 6px;
+          }
+        }
+      }
+    }
+
+    .hamburger{
+      width: 22px;
+      height: 16px;
+      position: relative;
+      &__line{
+        @extend %for-hamburger;
+        top: 50%;
+        &::before,
+        &::after{
+          @extend %for-hamburger;
+          content: '';
+        }
+        &::before{
+          top: 5px;
+        }
+        &::after{
+          bottom: 5px;
+        }
+      }
+    }
+
+    &__icon,
+    &__name,
+    &__description,
+    &__btn{
+      justify-self: center;
+    }
+    &__line{
+      position: absolute;
+      bottom: -91px;
+      left: 48%;
+    }
+  }
+
+  .main{
+    grid-area: main;
+    padding-top: 118px;
+    background-color: $darken-white;
+
+    .wrapper{
+      justify-self: center;
+      .name,
+      .sort-cruise{
+        text-align: center;
+      }
+
+      .sort-cruise{
+        padding: 11px 0 42px;
+      }
+    }
+
+    .wrapper-cruises{
+      @include grid($columns: auto auto, $rows: auto auto);
+      grid-gap: 20px 30px;
+      padding-bottom: 25px;
+
+      .block-cruise{
+        @include grid($columns: auto);
+        grid-template-areas:
+                "image"
+                "description";
+        position: relative;
+        background-color: $white;
+
+        .card-pinks{
+          border-color: $pink $pink transparent !important;
+          .card-position{
+            top: -45px;
+          }
+        }
+
+        &__details{
+          position: absolute;
+          right: 34px;
+          top: -7px;
+          @include grid($justify: center, $align: center);
+          width: 0;
+          height: 0;
+          border-width: 80px 45px 20px;
+          border-style: solid;
+          border-color: $light-blue $light-blue transparent;
+
+          .card-position{
+            position: relative;
+            top: -54px;
+            text-align: center;
+          }
+        }
+        &__img{
+          grid-area: image;
+        }
+        &__description{
+          grid-area: description;
+          padding-left: 39px;
+          .icon-triangle{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-left: 3px solid $light-blue;
+            border-bottom: 4px solid transparent;
+            margin-left: 14px;
+          }
+          .cruise-name{
+            padding: 29px 0 15px;
+          }
+          .cruise-price{
+            padding: 22px 0 39px;
+          }
+          .discount{
+            display: inline-block;
+            text-decoration: line-through;
+            padding-left: 34px;
+          }
+        }
+      }
+
+      .block-cruise_row{
+        display: grid;
+        grid-row-gap: 20px;
+      }
+    }
+
+    &__btn{
+      @include grid($justify: center);
+      padding-bottom: 62px;
+    }
+  }
+
+  .footer{
+    grid-area: footer;
+    padding: 29px 266px 77px;
+    .wrapper{
+      @include grid($columns: minmax(auto, 294px) auto auto);
+    }
+
+    &__left{
+      .menu{
+        list-style: none;
+        li{
+          &:not(:last-child){
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    &__center{
+      .social-icon{
+        @include grid($columns: repeat(4, 40px));
+        padding-top: 9px;
+        .wrapper-icon{
+          @include grid($justify: center, $align: center);
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: $primary;
+        }
+      }
+    }
+    &__right{
+      justify-self: end;
+      .item_row{
+        justify-content: start;
+        padding-left: 0;
+      }
+    }
+  }
+}
+

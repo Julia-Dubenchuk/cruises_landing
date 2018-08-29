@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+    <link rel="stylesheet" href="./css/index.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="container">
+            <section class="section header">
+                <div class="header__top">
+                    <div class="hamburger">
+                        <div class="hamburger__line"></div>
+                    </div>
+                    <div class="top-menu">
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="./image/user.svg" alt="user">
+                            </div>
+                            <div class="item__select">
+                                <select name="profile" id="profile" class="font-p">
+                                    <option value="profile">Личный кабинет</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__icon">
+                                <img src="./image/Р.png" alt="ruble">
+                            </div>
+                            <div class="item__select">
+                                <select name="currency" id="currency" class="font-p">
+                                    <option value="ruble">Рубль</option>
+                                    <option value="hryvna">Гривна</option>
+                                    <option value="dollar">USD</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="item__select">
+                                <select name="language" id="language" class="font-p">
+                                    <option value="ru">Ru</option>
+                                    <option value="uk">Uk</option>
+                                    <option value="En">En</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="item_row">
+                            <div class="item__phone font-phone">8 800 500-61-05</div>
+                            <div class="item__text font-small">Круглосуточная поддержка</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__icon">
+                    <img src="./image/logo.svg" alt="logo">
+                </div>
+                <div class="header__name font-h2">Морские прогулки</div>
+                <div class="header__description font-h1">по чёрному морю</div>
+                <div class="header__btn">
+                    <div class="button font-btn">Выбрать круиз
+                        <div class="button-darken"></div>
+                    </div>
+                </div>
+                <div class="header__line">
+                    <img src="image/line.svg" alt="line">
+                </div>
+            </section>
+            <section class="section main">
+                <div class="wrapper">
+                    <h2 class="name font-h2">Каталог круизов</h2>
+                    <div class="sort-cruise">
+                        <span class="font-p">Сортировать круизы по</span>
+                        <select name="type-sort" id="type-sort" class="font-p font-text_italics">
+                            <option value="price">цене</option>
+                            <option value="days">типу</option>
+                            <option value="travel">дате</option>
+                        </select>
+                    </div>
+                    <div class="wrapper-cruises">
+                        <div class="block-cruise">
+                            <div class="block-cruise__details">
+                                <div class="card-position font-card">Хит продаж</div>
+                            </div>
+                            <div class="block-cruise__img">
+                                <img src="./image/lighthouse-1319560.svg" alt="Anapy">
+                            </div>
+                            <div class="block-cruise__description">
+                                <div class="cruise-name font-h4">Морской круиз в Анапу
+                                <div class="icon-triangle"></div>
+                                </div>
+                                <div class="cruise-details font-p"><b>Маршрут:</b> Сочи-Лазаревское-Геленджик-Анапа</div>
+                                <div class="cruise-details font-p"><b>Продолжительность:</b> 10 ч. 0 мин.</div>
+                                <div class="cruise-price font-h3">49 000 руб.</div>
+                            </div>
+                        </div>
+                        <div class="block-cruise_row">
+                            <div class="sub-cruise">
+                                <div class="block-cruise">
+                                    <div class="block-cruise__details card-pinks">
+                                        <div class="card-position font-card">Акция</div>
+                                    </div>
+                                    <div class="block-cruise__img">
+                                        <img src="./image/sochi-2461968_1920.svg" alt="Sochi">
+                                    </div>
+                                    <div class="block-cruise__description">
+                                        <div class="cruise-name font-h4">Обзорная морская прогулка с экскурсией
+                                            <div class="icon-triangle"></div>
+                                        </div>
+                                        <div class="cruise-details font-p"><b>Маршрут:</b> Сочи-Адлер-Сочи (без высадки)</div>
+                                        <div class="cruise-details font-p"><b>Продолжительность:</b> 1 ч.</div>
+                                        <div class="cruise-price font-h3">5 000 руб.
+                                            <div class="discount font-discount">15000 руб.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sub-cruise">
+                                <div class="block-cruise">
+                                    <div class="block-cruise__details card-pinks">
+                                        <div class="card-position font-card">Скидка 10%</div>
+                                    </div>
+                                    <div class="block-cruise__img">
+                                        <img src="./image/sea.svg" alt="Sea">
+                                    </div>
+                                    <div class="block-cruise__description">
+                                        <div class="cruise-name font-h4">Морская прогулка в Геленджик
+                                            <div class="icon-triangle"></div>
+                                        </div>
+                                        <div class="cruise-details font-p"><b>Маршрут:</b> Сочи-Туапсе-Геленджик</div>
+                                        <div class="cruise-details font-p"><b>Продолжительность:</b> 12 ч. 30 мин.</div>
+                                        <div class="cruise-price font-h3">7 000 руб.
+                                        <div class="discount font-discount">10000 руб.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="block-cruise">
+                            <div class="block-cruise__img">
+                                <img src="./image/novorossiysk-211521_1920.svg" alt="Novorossiysk">
+                            </div>
+                            <div class="block-cruise__description">
+                                <div class="cruise-name font-h4">Морской круиз в Новороссийск
+                                <div class="icon-triangle"></div>
+                                </div>
+                                <div class="cruise-details font-p"><b>Маршрут:</b> Сочи-Геленджик-Новороссйиск-Геленджик-Сочи</div>
+                                <div class="cruise-details font-p"><b>Продолжительность:</b> 13 ч. 0 мин.</div>
+                                <div class="cruise-price font-h3">14 800 руб.</div>
+                            </div>
+                        </div>
+                        <div class="block-cruise">
+                            <div class="block-cruise__img">
+                                <img src="./image/sea-3141781_1920.svg" alt="Anapy">
+                            </div>
+                            <div class="block-cruise__description">
+                                <div class="cruise-name font-h4">Морская прогулка в Абрау-Дюрсо
+                                    <div class="icon-triangle"></div>
+                                </div>
+                                <div class="cruise-details font-p"><b>Маршрут:</b> Сочи-Абрау-Дюрсо</div>
+                                <div class="cruise-details font-p"><b>Продолжительность:</b> 11 ч. 0 мин.</div>
+                                <div class="cruise-price font-h3">14 800 руб.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main__btn">
+                        <div class="button font-btn">Больше круизов
+                            <div class="button__triangle"></div>
+                            <div class="button-darken"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section footer">
+                <div class="wrapper">
+                    <div class="footer__left">
+                        <ul class="menu">
+                            <li>Вход для партнеров</li>
+                            <li>О компании</li>
+                            <li>Контакты</li>
+                        </ul>
+                    </div>
+                    <div class="footer__center">
+                        <div class="text">Будь на связи:</div>
+                        <div class="social-icon">
+                            <div class="wrapper-icon">
+                                <img src="./image/vk.svg" alt="vk">
+                            </div>
+                            <div class="wrapper-icon">
+                                <img src="./image/ok.svg" alt="ok">
+                            </div>
+                            <div class="wrapper-icon">
+                                <img src="./image/yt.svg" alt="youtube">
+                            </div>
+                            <div class="wrapper-icon">
+                                <img src="./image/insta.svg" alt="instagram">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__right">
+                        <div class="item_row">
+                            <div class="item__phone font-phone">8 800 500-61-05</div>
+                            <div class="item__text font-small">Круглосуточная поддержка</div>
+                        </div>
+                        <div class="sign">
+                            © 2016 OOO «Городские Круизы»
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

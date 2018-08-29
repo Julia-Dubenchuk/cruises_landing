@@ -1,0 +1,19 @@
+@import "__colors";
+
+$fontRaleway: 'Raleway', 'Roboto', sans-serif;
+
+@mixin font-item($family: $fontRaleway,  $size: 14px, $height: 16px, $weight: 400, $color: $primary) {
+  font-family: $family;
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin grid($columns: auto, $rows: auto, $justify: stretch, $align: start) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  justify-content: $justify;
+  align-items: $align;
+}
