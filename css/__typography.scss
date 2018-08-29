@@ -1,0 +1,51 @@
+@import "__utillity", "__colors";
+
+$fontSlab: 'RobotoSlab', 'Roboto', serif;
+
+.font-h1{
+  @include font-item($family: $fontSlab, $size: 100px, $height: 100px);
+  text-transform: uppercase;
+}
+
+.font-h2{
+  @include font-item($family: $fontSlab, $size: 36px, $height: 38px);
+  margin: 0;
+}
+
+.font-h3{
+  @include font-item($family: $fontSlab, $size: 30px, $height: 34px);
+}
+
+.font-h4{
+  @include font-item($family: $fontSlab, $size: 18px, $height: 18px, $color: $darken-blue);
+}
+
+.font-card{
+  @include font-item($height: 18px, $color: $white);
+  text-transform: uppercase;
+}
+
+.font-discount{
+  @include font-item($family: $fontSlab, $height: 18px);
+}
+
+.font-btn{
+  @include font-item($weight: 500, $color: $white);
+  text-transform: uppercase;
+}
+
+.font-p{
+  @include font-item();
+}
+
+.font-phone{
+  @include font-item($weight: 700);
+}
+
+.font-small{
+  @include font-item($size: 10px);
+}
+
+.font-text_italics{
+  font-style: italic;
+}

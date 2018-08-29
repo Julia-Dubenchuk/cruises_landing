@@ -1,9 +1,9 @@
-@import "../colors", "../button";
+@import "__colors", "__button", "__typography", "__select", "__utillity.scss";
 //========================Template Selector===================================
 %for-hamburger{
   width: 100%;
   height: 2px;
-  background: #0d3351;
+  background: $primary;
   position: absolute;
 }
 
@@ -11,70 +11,23 @@ body{
   margin: 0;
   padding: 0;
   font-family: 'Raleway', 'Roboto', sans-serif;
-  color: #0d3351;
+  color: $primary;
 }
 
-.font-h2{
-  font-family: 'RobotoSlab', serif;
-  font-size: 36px;
-  font-weight: 400;
-  line-height: 38px;
-}
+.item_row{
+  @include grid($rows: 14px auto, $justify: end);
+  padding-left: 39px;
 
-.font-h1{
-  font-family: 'RobotoSlab', serif;
-  font-size: 100px;
-  font-weight: 400;
-  line-height: 100px;
-  text-transform: uppercase;
-}
-
-.font-btn{
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 16px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
-
-.button{
-  padding: 12px 16px;
-  background-color: rgb(51, 199, 253);
-  cursor: pointer;
-  position: relative;
-  &:hover .button-darken{
-    display: block;
-  }
-}
-
-.button-darken{
-  display: none;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, .13);
-}
-
-select{
-  background-color: transparent;
-  border: none;
-  outline: none;
 }
 
 .container{
-  display: grid;
-  grid-template-columns: 100%;
-  grid-template-rows: auto;
+  @include grid($columns: 100%, $rows: auto);
   grid-template-areas:
           "header"
           "main"
           "footer";
   .section{
     display: grid;
-    grid-template-rows: 85px minmax(auto, 104px) minmax(auto, 69px) minmax(auto, 146px) auto;
-    padding: 0 266px;
   }
   .header{
     grid-area: header;
@@ -83,45 +36,24 @@ select{
     background: url("../image/sochi-2258855.svg") left bottom no-repeat;
     background-size: cover;
     box-sizing: border-box;
+    position: relative;
+    grid-template-rows: 85px minmax(auto, 104px) minmax(auto, 69px) minmax(auto, 146px) auto;
+    padding: 0 266px;
 
     &__top{
-      display: grid;
-      grid-template-columns: 50% 50%;
+      @include grid($columns: 50% 50%);
       padding-top: 34px;
       .top-menu{
         display: flex;
         justify-content: flex-end;
         .item{
-          display: grid;
-          grid-template-columns: repeat(2, auto);
-          justify-content: end;
+          @include grid($columns: repeat(2, auto), $justify: end);
           padding-left: 39px;
           &__icon{
             padding-right: 8px;
           }
           &__text{
             padding-top: 6px;
-          }
-          .font-text{
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 16px;
-          }
-        }
-        .item_row{
-          display: grid;
-          justify-content: end;
-          grid-template-rows: 14px auto;
-          padding-left: 39px;
-          .font-phone{
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 14px;
-          }
-          .font-small{
-            font-size: 10px;
-            font-weight: 400;
-            line-height: 16px;
           }
         }
       }
@@ -154,13 +86,146 @@ select{
     &__btn{
       justify-self: center;
     }
+    &__line{
+      position: absolute;
+      bottom: -91px;
+      left: 48%;
+    }
   }
 
   .main{
     grid-area: main;
+    padding-top: 118px;
+    background-color: $darken-white;
+
+    .wrapper{
+      justify-self: center;
+      .name,
+      .sort-cruise{
+        text-align: center;
+      }
+
+      .sort-cruise{
+        padding: 11px 0 42px;
+      }
+    }
+
+    .wrapper-cruises{
+      @include grid($columns: auto auto, $rows: auto auto);
+      grid-gap: 20px 30px;
+      padding-bottom: 25px;
+
+      .block-cruise{
+        @include grid($columns: auto);
+        grid-template-areas:
+                "image"
+                "description";
+        position: relative;
+        background-color: $white;
+
+        .card-pinks{
+          border-color: $pink $pink transparent !important;
+          .card-position{
+            top: -45px;
+          }
+        }
+
+        &__details{
+          position: absolute;
+          right: 34px;
+          top: -7px;
+          @include grid($justify: center, $align: center);
+          width: 0;
+          height: 0;
+          border-width: 80px 45px 20px;
+          border-style: solid;
+          border-color: $light-blue $light-blue transparent;
+
+          .card-position{
+            position: relative;
+            top: -54px;
+            text-align: center;
+          }
+        }
+        &__img{
+          grid-area: image;
+        }
+        &__description{
+          grid-area: description;
+          padding-left: 39px;
+          .icon-triangle{
+            display: inline-block;
+            width: 0;
+            height: 0;
+            border-top: 4px solid transparent;
+            border-left: 3px solid $light-blue;
+            border-bottom: 4px solid transparent;
+            margin-left: 14px;
+          }
+          .cruise-name{
+            padding: 29px 0 15px;
+          }
+          .cruise-price{
+            padding: 22px 0 39px;
+          }
+          .discount{
+            display: inline-block;
+            text-decoration: line-through;
+            padding-left: 34px;
+          }
+        }
+      }
+
+      .block-cruise_row{
+        display: grid;
+        grid-row-gap: 20px;
+      }
+    }
+
+    &__btn{
+      @include grid($justify: center);
+      padding-bottom: 62px;
+    }
   }
+
   .footer{
     grid-area: footer;
+    padding: 29px 266px 77px;
+    .wrapper{
+      @include grid($columns: minmax(auto, 294px) auto auto);
+    }
+
+    &__left{
+      .menu{
+        list-style: none;
+        li{
+          &:not(:last-child){
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+
+    &__center{
+      .social-icon{
+        @include grid($columns: repeat(4, 40px));
+        padding-top: 9px;
+        .wrapper-icon{
+          @include grid($justify: center, $align: center);
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          background-color: $primary;
+        }
+      }
+    }
+    &__right{
+      justify-self: end;
+      .item_row{
+        justify-content: start;
+        padding-left: 0;
+      }
+    }
   }
 }
 
