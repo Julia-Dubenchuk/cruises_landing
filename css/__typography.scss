@@ -24,6 +24,10 @@ $fontSlab: 'RobotoSlab', 'Roboto', serif;
   @include font-item($height: 18px, $color: $white);
   text-transform: uppercase;
 }
+.font-menu{
+  @include font-item($height: 18px, $color: $white);
+}
+
 
 .font-discount{
   @include font-item($family: $fontSlab, $height: 18px);

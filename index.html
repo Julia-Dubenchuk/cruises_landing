@@ -12,7 +12,7 @@
         <div class="container">
             <section class="section header">
                 <div class="header__top">
-                    <div class="hamburger">
+                    <div class="hamburger" id="burger">
                         <div class="hamburger__line"></div>
                     </div>
                     <div class="top-menu">
@@ -53,6 +53,14 @@
                         </div>
                     </div>
                 </div>
+                <nav class="menu menu-hidden" id="navigation">
+                    <li class="font-menu">Популярные маршруты</li>
+                    <li class="font-menu">Расписание рейсов</li>
+                    <li class="font-menu">Забронированные рейсы</li>
+                    <li class="font-menu">Вход для партнёров</li>
+                    <li class="font-menu">О компании</li>
+                    <li class="font-menu">Контакты</li>
+                </nav>
                 <div class="header__icon">
                     <img src="./image/logo.svg" alt="logo">
                 </div>
@@ -155,7 +163,7 @@
                                 <img src="./image/sea-3141781_1920.svg" alt="Anapy">
                             </div>
                             <div class="block-cruise__description">
-                                <div class="cruise-name font-h4">Морская прогулка в Абрау-Дюрсо
+                                <div class="cruise-name font-h4" id="modalBtn">Морская прогулка в Абрау-Дюрсо
                                     <div class="icon-triangle"></div>
                                 </div>
                                 <div class="cruise-details font-p"><b>Маршрут:</b> Сочи-Абрау-Дюрсо</div>
@@ -209,6 +217,13 @@
                     </div>
                 </div>
             </section>
+            <div id="simpleModal" class="modal">
+                <div class="modal-content">
+                    <span class="closeBtn">&times;</span>
+                    <p>Hello...I am a modal</p>
+                </div>
+            </div>
         </div>
+        <script src="js/js.js"></script>
     </body>
 </html>
