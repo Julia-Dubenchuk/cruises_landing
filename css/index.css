@@ -3,6 +3,7 @@
   background-color: #33c7fd;
   cursor: pointer;
   position: relative;
+  overflow: hidden;
 }
 .button__triangle {
   display: inline-block;
@@ -28,6 +29,21 @@
   background: rgba(0, 0, 0, 0.13);
 }
 
+.pulse {
+  background-color: #64d6ff;
+  border-radius: 50%;
+  animation: pulse 0.7s ease-out;
+  transform: scale(0);
+  position: absolute;
+}
+
+@keyframes pulse {
+  to {
+    transform: scale(2);
+    background-color: #fff;
+    opacity: 0;
+  }
+}
 .font-h1 {
   font-family: "RobotoSlab", "Roboto", serif;
   font-size: 100px;
@@ -62,6 +78,23 @@
   color: #00a2dd;
 }
 
+.font-card {
+  font-family: "Raleway", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.font-menu {
+  font-family: "Raleway", "Roboto", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
 .font-discount {
   font-family: "RobotoSlab", "Roboto", serif;
   font-size: 14px;
@@ -79,16 +112,7 @@
   text-transform: uppercase;
 }
 
-.font-card {
-  font-family: "Raleway", "Roboto", sans-serif;
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  color: #ffffff;
-  text-transform: uppercase;
-}
-
-.font-text {
+.font-p {
   font-family: "Raleway", "Roboto", sans-serif;
   font-size: 14px;
   line-height: 16px;
@@ -96,20 +120,24 @@
   color: #0d3351;
 }
 
-.font-text_italics {
-  font-style: italic;
-}
-
 .font-phone {
+  font-family: "Raleway", "Roboto", sans-serif;
   font-size: 14px;
+  line-height: 16px;
   font-weight: 700;
-  line-height: 14px;
+  color: #0d3351;
 }
 
 .font-small {
+  font-family: "Raleway", "Roboto", sans-serif;
   font-size: 10px;
-  font-weight: 400;
   line-height: 16px;
+  font-weight: 400;
+  color: #0d3351;
+}
+
+.font-text_italics {
+  font-style: italic;
 }
 
 select {
@@ -152,6 +180,44 @@ body {
 .container .section {
   display: grid;
 }
+.container .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.container .modal-content {
+  background-color: #f4f4f4;
+  margin: 20% auto;
+  padding: 20px;
+  width: 70%;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.container .closeBtn {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+}
+.container .closeBtn:hover, .container .closeBtn:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
 .container .header {
   grid-area: header;
   width: 100%;
@@ -188,6 +254,34 @@ body {
 }
 .container .header__top .top-menu .item__text {
   padding-top: 6px;
+}
+.container .header nav.menu {
+  width: 420px;
+  height: 413px;
+  background: #0d3351;
+  padding: 73px 44px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 61px;
+  left: 266px;
+  z-index: 2;
+}
+.container .header nav.menu li {
+  list-style: none;
+  padding-bottom: 31px;
+  cursor: pointer;
+}
+.container .header nav.menu li:last-child {
+  padding-bottom: 0;
+}
+.container .header nav.menu li:hover {
+  opacity: 0.3;
+}
+.container .header .menu-show {
+  display: block;
+}
+.container .header .menu-hidden {
+  display: none;
 }
 .container .header .hamburger {
   width: 22px;

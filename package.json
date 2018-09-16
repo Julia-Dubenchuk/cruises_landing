@@ -1,6 +1,7 @@
 {
   "lockfileVersion": 1,
   "dependencies": {
-    "sass": "^1.13.0"
+    "git": "^0.1.5",
+    "sass": "^1.13.2"
   }
 }
