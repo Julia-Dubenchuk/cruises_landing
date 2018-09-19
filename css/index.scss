@@ -55,11 +55,12 @@ body{
     padding: 0 266px;
 
     &__top{
-      @include grid($columns: 50% 50%);
+      @include grid($columns: auto auto);
       padding-top: 34px;
       .top-menu{
         display: flex;
         justify-content: flex-end;
+        flex-wrap: wrap;
         .item{
           @include grid($columns: repeat(2, auto), $justify: end);
           padding-left: 39px;
@@ -302,7 +303,7 @@ body{
     grid-column-gap: 30px;
     .modal-left{
       display: grid;
-      grid-template-rows: auto auto;
+      grid-template-rows: 240px auto;
       grid-row-gap: 7px;
       .collection-head{
       }
@@ -342,5 +343,55 @@ body{
     color: #000000;
     text-decoration: none;
     cursor: pointer;
+  }
+}
+
+
+//===============================MEDIA======================================================
+
+@media only screen and (max-width: 1535px) {
+  .font-h1{
+    font-size: 4vw;
+  }
+}
+
+@media only screen and (max-width: 1111px) {
+  .container{
+    .header{
+      padding: 0 200px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .container{
+    .header{
+      padding: 0 16px;
+    }
+    .header__top{
+      .top-menu {
+        .item{
+          padding-left: 16px;
+          padding-bottom: 16px;
+        }
+      }
+    }
+  }
+  .item_row{
+    padding-left: 16px;
+  }
+  .font-h1{
+    font-size: 28px;
+  }
+  .font-h2{
+    font-size: 24px;
+  }
+}
+
+@media only screen and (max-width: 520px){
+  .container{
+    .header{
+      grid-template-rows: minmax(85px, 160px) minmax(auto, 104px) minmax(auto, 69px) minmax(auto, 86px) auto;
+    }
   }
 }

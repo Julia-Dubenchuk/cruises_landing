@@ -5,7 +5,6 @@ var nav = document.getElementById('navigation'),
     showMenu = false;
 console.log('burger', burger);
 burger.addEventListener('click', function() {
-    // alert('hi');
     showMenu = !showMenu;
     if(showMenu){
         nav.classList.remove('menu-hidden');
