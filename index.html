@@ -9,7 +9,7 @@
         <title>Document</title>
     </head>
     <body>
-        <div class="container">
+        <div class="container" id="scroll">
             <section class="section header">
                 <div class="header__top">
                     <div class="hamburger" id="burger">
@@ -217,24 +217,42 @@
                     </div>
                 </div>
             </section>
-            <div id="simpleModal" class="modal">
-                <div class="modal-content">
+        </div>
+        <div id="simpleModal" class="modal">
+            <div class="modal-content">
+                <div class="close-wrapper">
                     <span class="closeBtn"><img src="./image/x.png" alt="close"></span>
-                    <div class="wrapper">
-                        <div class="modal-left">
-                            <div class="collection-head">
-                                <img src="./image/sea-3141781_1920.svg" alt="sea">
-                            </div>
-                            <div class="collection-pictures">
-                                <div class="collection-pictures__card"><img src="./image/picture29.png" alt="picture1"></div>
-                                <div class="collection-pictures__card"><img src="./image/picture291.png" alt="picture2"></div>
-                                <div class="collection-pictures__card"><img src="./image/picture292.png" alt="picture3"></div>
-                                <div class="collection-pictures__card"><img src="./image/picture293.png" alt="picture4"></div>
-                            </div>
+                </div>
+                <div class="wrapper">
+                    <div class="modal-left">
+                        <div class="collection-head">
+                            <img src="./image/sea-3141781.png" alt="sea">
                         </div>
-                        <div class="modal-right">
-                            <div class="modal-title"></div>
-                            <div class="modal-description"></div>
+                        <div class="collection-pictures">
+                            <div class="collection-pictures__card"><img src="./image/picture29.png" alt="picture1"></div>
+                            <div class="collection-pictures__card"><img src="./image/picture291.png" alt="picture2"></div>
+                            <div class="collection-pictures__card"><img src="./image/picture292.png" alt="picture3"></div>
+                            <div class="collection-pictures__card"><img src="./image/picture293.png" alt="picture4"></div>
+                        </div>
+                    </div>
+                    <div class="modal-right">
+                        <div class="modal-title font-h4">Морская прогулка в Абрау-Дюрсо</div>
+                        <div class="modal-description">
+                            <p class="font-p"><b>Маршрут:</b> Сочи - Абрау - Дюрсо <br>
+                                <b>Продолжительность:</b> 11 ч. 0 мин</p>
+                            <p class="font-p"><b>Расписание:</b><br>
+                                Отправление из Сочи: ежедневно в 10:00, 11:40, 13:20, 15:00, 16:40 <br>
+                                Отправление из Абрау-Дюрсо: ежедневно
+                                в 12:25, 14:05, 15:45, 17:25, 19:05 <br>
+                                Продолжительность: 11 часов 0 мин., из которых 10 часов - морская прогулка (туда и обратно), от 1 часа 30 мин. - свободное время в Ласточкином гнезде
+                                <br>
+                                Причал отправления/прибытия: набережная Ленина, причал №8, теплоход "Азов"</p>
+                        </div>
+                        <div class="price cruise-price font-h3">14 800 руб.</div>
+                        <div class="main__btn">
+                            <div class="button font-btn">Бронирование
+                                <div class="button-darken"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
