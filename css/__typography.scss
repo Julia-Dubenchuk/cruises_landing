@@ -5,6 +5,7 @@ $fontSlab: 'RobotoSlab', 'Roboto', serif;
 .font-h1{
   @include font-item($family: $fontSlab, $size: 100px, $height: 100px);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .font-h2{
