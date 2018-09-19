@@ -24,6 +24,7 @@ $fontSlab: 'RobotoSlab', 'Roboto', serif;
   @include font-item($height: 18px, $color: $white);
   text-transform: uppercase;
 }
+
 .font-menu{
   @include font-item($height: 18px, $color: $white);
 }
@@ -39,7 +40,7 @@ $fontSlab: 'RobotoSlab', 'Roboto', serif;
 }
 
 .font-p{
-  @include font-item();
+  @include font-item($height: 24px);
 }
 
 .font-phone{

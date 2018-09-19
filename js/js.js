@@ -15,10 +15,6 @@ burger.addEventListener('click', function() {
         nav.classList.add('menu-hidden');
     }
 });
-// burger.onclick = function() {
-//     console.log('eeeeeeeef');
-//   burger.style.display = 'block';
-// };
 
 forEach.call(buttons, function(b) {
     b.addEventListener('mousedown', function(){
@@ -30,14 +26,10 @@ forEach.call(buttons, function(b) {
    b.addEventListener('click', addElement);
 });
 
-// function addPress() {
-//
-// }
-
 function addElement(e) {
     var addDiv = document.createElement('div'),
         mValue = Math.max(this.clientWidth, this.clientHeight),
-        rect   = this.getBoundingClientRect();
+        rect   = this.getBoundingClientRect(),
         sDiv   = addDiv.style,
         px     = 'px';
     sDiv.width = sDiv.height = mValue + px;
@@ -50,7 +42,7 @@ function addElement(e) {
 }
 
 // Get modal element
-var modal = document.getElementById('simpleModal')
+var modal = document.getElementById('simpleModal');
 // Get open modal button
 var modalBtn = document.getElementById('modalBtn');
 // Get close button
@@ -70,7 +62,7 @@ function openModal() {
 
 // Function to close modal
 function closeModal() {
-modal.style.display = 'none';
+    modal.style.display = 'none';
 }
 
 // Function to close modal if outside click
